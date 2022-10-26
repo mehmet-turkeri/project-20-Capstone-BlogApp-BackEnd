@@ -63,20 +63,6 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 from dj_rest_auth.serializers import TokenSerializer
 
-'''
-# Aşağıdaki Serializer user verisi içindir. Aynı datayı RegisterSerializer'dan çektik.
-class UserTokenSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = User
-        fields = (
-            'username',
-            'email',
-            'first_name',
-            'last_name',
-        )
-'''
-
 class WideTokenSerializer(TokenSerializer):
 
     # user = UserTokenSerializer(read_only=True)

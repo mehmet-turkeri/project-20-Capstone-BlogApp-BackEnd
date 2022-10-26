@@ -9,7 +9,7 @@ from django.conf.urls.static import static
 
 schema_view = get_schema_view(
     openapi.Info(
-        title = "Blog Tracking API",
+        title = "Blog API",
         default_version = "v1",
         description = "Blog API project allows you to write blog on the subject you want, read what others have written, and write comments on them.",
         terms_of_service = "#",
@@ -28,7 +28,7 @@ urlpatterns = [
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     # for debug:
-    # path('__debug__/', include('debug_toolbar.urls')),
+    path('__debug__/', include('debug_toolbar.urls')),
     # go to users and blog/:
     path('users/', include('users.urls')),
     path('blog/', include('blog.urls')),

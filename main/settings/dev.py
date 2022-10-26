@@ -58,6 +58,6 @@ LOGGING = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'Blog_db.sqlite3',
+        'NAME': BASE_DIR / 'blog_db.sqlite3',
     }
 }
